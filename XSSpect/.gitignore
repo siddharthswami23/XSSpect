@@ -1,0 +1,37 @@
+# Binaries
+xsscan.exe
+xsscan
+xsscan-linux
+xsscan-macos
+xsscan-windows
+*.exe
+!build.ps1
+
+# Go build artifacts
+*.o
+*.a
+*.so
+*.dylib
+*.test
+*.out
+
+# Go workspace
+go.work
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp

