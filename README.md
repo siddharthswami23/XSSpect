@@ -10,10 +10,13 @@ XSSpect is a CLI scanner for detecting reflected XSS vulnerabilities. It uses br
 ---
 
 ## Team Details
-* **Team Name:** TEAM MARCO
+* **Team Name:** TEAM Acheivers
 * **Leader:** Siddharth Swami
-* **Member:** Ayush Shankarpure
-* **Member:** Chinmay Kulkarni
+* **Member:** Avadhut Mali
+* **Member:** Pooja Bhosale
+* **Member:** Rameshwari Satpute
+* **Member:** Nandini Patil
+
 
 ## Problem Statement
 Manual XSS testing is time-consuming and error-prone. Automated tools often generate high false positive rates with no real execution verification.
@@ -189,4 +192,4 @@ chmod +x /usr/bin/chromedriver
 
 ---
 
-**Made with ❤️ by Team MARCO for GDG Hack2Skill 2026**
+**Made with ❤️ by Team Acheivers for ADCET HACKATHON - SEASON 3 **
